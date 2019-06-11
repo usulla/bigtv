@@ -1,0 +1,71 @@
+{
+    "success": true,
+    "channel": "tnt",
+    "utc": 0,
+    "tvprogram": [
+        {
+            "weekday": "понедельник",
+            "programs": [
+                {
+                    "id": "PR597118",
+                    "liveTime": "8:35",
+                    "programType": "Программа",
+                    "programName": "ТНТ. Best",
+                    "serialNumber": 45,
+                    "timing": "0:24:36",
+                    "previousShow": "27.05.2019"
+                },
+                {
+                    "id": "PR597119",
+                    "liveTime": "9:35",
+                    "programType": "Программа",
+                    "programName": "Дом-2. Lite",
+                    "serialNumber": 35,
+                    "timing": "0:25:36",
+                    "previousShow": "21.05.2019"
+                },
+                {
+                    "id": "PR597120",
+                    "liveTime": "9:35",
+                    "programType": "Программа",
+                    "programName": "Бородина против Бузовой",
+                    "serialNumber": 30,
+                    "timing": "0:30:36",
+                    "previousShow": "31.05.2019"
+                }
+            ]
+        },
+        {
+            "weekday": "вторник",
+            "programs": [
+                {
+                    "id": "PR597118",
+                    "liveTime": "8:35",
+                    "programType": "Программа",
+                    "programName": "ТНТ. Best",
+                    "serialNumber": 45,
+                    "timing": "0:24:36",
+                    "previousShow": "27.05.2019"
+                },
+                {
+                    "id": "PR597119",
+                    "liveTime": "9:35",
+                    "programType": "Программа",
+                    "programName": "Дом-2. Lite",
+                    "serialNumber": 35,
+                    "timing": "0:25:36",
+                    "previousShow": "21.05.2019"
+                },
+                {
+                    "id": "PR597120",
+                    "liveTime": "9:35",
+                    "programType": "Программа",
+                    "programName": "Бородина против Бузовой",
+                    "serialNumber": 30,
+                    "timing": "0:30:36",
+                    "previousShow": "31.05.2019"
+                }
+            ]
+        }
+    ]
+}
