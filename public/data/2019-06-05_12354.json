@@ -1,0 +1,307 @@
+[
+    {
+      "datetime":"2019-06-05 07:00:00",
+      "IDEC":"PR597010",
+      "IDEC_ORIG":"PR597010",
+      "HOUSE_ID":"PR597010-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 07:30:00",
+      "IDEC":"PR597013",
+      "IDEC_ORIG":"PR597013",
+      "HOUSE_ID":"PR597013-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 08:00:00",
+      "IDEC":"PR597016",
+      "IDEC_ORIG":"PR597016",
+      "HOUSE_ID":"PR597016-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 08:30:00",
+      "IDEC":"PR597019",
+      "IDEC_ORIG":"PR597019",
+      "HOUSE_ID":"PR597019-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 09:00:00",
+      "IDEC":"PR655132",
+      "IDEC_ORIG":"PR655132",
+      "HOUSE_ID":"PR655132-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 10:15:00",
+      "IDEC":"PR667079",
+      "IDEC_ORIG":"PR667079",
+      "HOUSE_ID":"PR667079-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 11:30:00",
+      "IDEC":"PR658087",
+      "IDEC_ORIG":"PR658087",
+      "HOUSE_ID":"PR658087-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 12:30:00",
+      "IDEC":"PR667382",
+      "IDEC_ORIG":"PR667382",
+      "HOUSE_ID":"PR667382-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 13:30:00",
+      "IDEC":"PR265044",
+      "IDEC_ORIG":"PR265044",
+      "HOUSE_ID":"PR265044-M",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 14:00:00",
+      "IDEC":"PR265045",
+      "IDEC_ORIG":"PR265045",
+      "HOUSE_ID":"PR265045-B",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 14:30:00",
+      "IDEC":"PR265046",
+      "IDEC_ORIG":"PR265046",
+      "HOUSE_ID":"PR265046-B",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 15:00:00",
+      "IDEC":"PR280597",
+      "IDEC_ORIG":"PR280597",
+      "HOUSE_ID":"PR280597-D",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 15:30:00",
+      "IDEC":"PR280598",
+      "IDEC_ORIG":"PR280598",
+      "HOUSE_ID":"PR280598-C",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 16:00:00",
+      "IDEC":"PR280600",
+      "IDEC_ORIG":"PR280600",
+      "HOUSE_ID":"PR280600-B",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 16:30:00",
+      "IDEC":"PR280604",
+      "IDEC_ORIG":"PR280604",
+      "HOUSE_ID":"PR280604-B",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 17:00:00",
+      "IDEC":"PR254365",
+      "IDEC_ORIG":"PR254365",
+      "HOUSE_ID":"PR254365-C",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 17:30:00",
+      "IDEC":"PR254368",
+      "IDEC_ORIG":"PR254368",
+      "HOUSE_ID":"PR254368-C",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 18:00:00",
+      "IDEC":"PR254369",
+      "IDEC_ORIG":"PR254369",
+      "HOUSE_ID":"PR254369-B",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 18:30:00",
+      "IDEC":"PR254374",
+      "IDEC_ORIG":"PR254374",
+      "HOUSE_ID":"PR254374-C",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 19:00:00",
+      "IDEC":"PR254377",
+      "IDEC_ORIG":"PR254377",
+      "HOUSE_ID":"PR254377-C",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 19:30:00",
+      "IDEC":"PR254380",
+      "IDEC_ORIG":"PR254380",
+      "HOUSE_ID":"PR254380-F",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 20:30:00",
+      "IDEC":"PR649232",
+      "IDEC_ORIG":"PR649232",
+      "HOUSE_ID":"PR649232-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 21:00:00",
+      "IDEC":"PR663890",
+      "IDEC_ORIG":"PR663890",
+      "HOUSE_ID":"PR663890-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 22:00:00",
+      "IDEC":"PR661910",
+      "IDEC_ORIG":"PR661910",
+      "HOUSE_ID":"PR661910-D",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-05 23:00:00",
+      "IDEC":"PR657868",
+      "IDEC_ORIG":"PR657868",
+      "HOUSE_ID":"PR657868-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-06 00:05:00",
+      "IDEC":"PR649820",
+      "IDEC_ORIG":"PR649820",
+      "HOUSE_ID":"PR649820-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-06 01:10:00",
+      "IDEC":"PR268021",
+      "IDEC_ORIG":"PR268021",
+      "HOUSE_ID":"PR268021-P",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-06 02:10:00",
+      "IDEC":"PR271712",
+      "IDEC_ORIG":"PR271712",
+      "HOUSE_ID":"PR271712-K",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-06 03:00:00",
+      "IDEC":"PR595331",
+      "IDEC_ORIG":"PR595331",
+      "HOUSE_ID":"PR595331-C",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-06 03:55:00",
+      "IDEC":"PR595332",
+      "IDEC_ORIG":"PR595332",
+      "HOUSE_ID":"PR595332-B",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-06 04:45:00",
+      "IDEC":"PR595333",
+      "IDEC_ORIG":"PR595333",
+      "HOUSE_ID":"PR595333-B",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-06 05:40:00",
+      "IDEC":"PR597022",
+      "IDEC_ORIG":"PR597022",
+      "HOUSE_ID":"PR597022-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-06 06:05:00",
+      "IDEC":"PR597025",
+      "IDEC_ORIG":"PR597025",
+      "HOUSE_ID":"PR597025-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    },
+
+    {
+      "datetime":"2019-06-06 06:30:00",
+      "IDEC":"PR597028",
+      "IDEC_ORIG":"PR597028",
+      "HOUSE_ID":"PR597028-A",
+      "channel_rf":12354,
+      "masterchannel_rf":12354
+    }
+]
