@@ -94,11 +94,7 @@ class App extends Component {
     } else if (isLoaded) {
       return (
         <div className='center_block'>   
-          {this.state.comparedTables.map((table, index) => {
-            return (
-              <CustomPaginationActionsTable dataForTable={table} key={index} index={index}/>
-              );
-          })}
+          <CustomPaginationActionsTable dataForTable={this.state.comparedTables}/>
          <HorizontalLinearStepper/>    
           {/* <ButtonEl/> */}
         </div>
