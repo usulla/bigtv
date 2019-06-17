@@ -15,7 +15,7 @@ const useStyles1 = makeStyles(theme => ({
   root: {
     flexShrink: 0,
     color: theme.palette.text.secondary,
-    marginLeft: theme.spacing(2.5)
+    marginLeft: theme.spacing(2.0)
   }
 }));
 
@@ -29,11 +29,11 @@ function createData(obj) {
 
 const useStyles2 = makeStyles(theme => ({
   root: {
-    width: "100%",
-    marginTop: theme.spacing(3)
+    width: "80%",
+    marginTop: theme.spacing(2.8)
   },
   table: {
-    minWidth: 500
+    minWidth: "500"
   },
   tableWrapper: {
     overflowX: "auto"
@@ -48,7 +48,6 @@ function CustomPaginationActionsTable(props) {
 
   var table1 = rows[0];
   var table2 = rows[1];
-  console.log(table1, "fgfg");
   const classes = useStyles2();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(20005);
@@ -56,8 +55,12 @@ function CustomPaginationActionsTable(props) {
 
   const emptyRows =
     rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
-  const isSelected = name => selected.indexOf(name) !== -1;
-  console.log(isSelected(), "isSelected");
+  const isSelected = (name) => {
+    console.log(name)
+    console.log(selected, "selected");
+    console.log(selected.indexOf(name) !== -1, 'lll');
+    return selected.indexOf(name) !== -1;
+  }; 
 
   function handleSelectAllClick(event) {
     if (event.target.checked) {
@@ -67,6 +70,7 @@ function CustomPaginationActionsTable(props) {
     }
     setSelected([]);
   }
+
   function handleClick(event, name) {
     const selectedIndex = selected.indexOf(name);
     let newSelected = [];
@@ -108,13 +112,14 @@ function CustomPaginationActionsTable(props) {
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row, index) => {
                 const isItemSelected = isSelected(row.IDEC+index);
+                const isItemSelected2 = isSelected(table2[index].IDEC+index);
                 const labelId = `enhanced-table-checkbox-${index}`;
                 let button2;
                 if (row.compare === false) {
                   button2 = (
-                    <div>
+                    <React.Fragment>
                       <TableRow
-                        onClick={event => handleClick(event, row.IDEC)}
+                        onClick={event => handleClick(event, row.IDEC+index)}
                         role="checkbox"
                         aria-checked={isItemSelected}
                         tabIndex={-1}
@@ -136,7 +141,7 @@ function CustomPaginationActionsTable(props) {
                           scope="row"
                           padding="none"
                         >
-                          {row.IDEC}
+                          {row.IDEC+index}
                         </TableCell>
                         <TableCell align="right">{row.datetime}</TableCell>
                         <TableCell align="right">{row.datetime}</TableCell>
@@ -144,18 +149,18 @@ function CustomPaginationActionsTable(props) {
                       </TableRow>
                       <TableRow
                         onClick={event =>
-                          handleClick(event, table2[index].IDEC)
+                          handleClick(event, table2[index].IDEC+index)
                         }
                         role="checkbox"
-                        aria-checked={isItemSelected}
+                        aria-checked={isItemSelected2}
                         tabIndex={-1}
-                        key={table2[index].IDEC}
+                        key={table2[index].IDEC+index}
                         selected={isItemSelected}
                         className={classes.tableError}
                       >
                         <TableCell padding="checkbox">
                           <Checkbox
-                            checked={isItemSelected}
+                            checked={isItemSelected2}
                             inputProps={{
                               "aria-labelledby": labelId
                             }}
@@ -167,7 +172,7 @@ function CustomPaginationActionsTable(props) {
                           scope="row"
                           padding="none"
                         >
-                          {table2[index].IDEC}
+                          {table2[index].IDEC+index}
                         </TableCell>
                         <TableCell align="right">
                           {table2[index].datetime}
@@ -179,16 +184,16 @@ function CustomPaginationActionsTable(props) {
                           {table2[index].HOUSE_ID}
                         </TableCell>
                       </TableRow>
-                    </div>
+                    </React.Fragment>
                   );
                 } else {
                   button2 = (
                     <TableRow
-                      onClick={event => handleClick(event, row.IDEC)}
+                      onClick={event => handleClick(event, row.IDEC+index)}
                       role="checkbox"
                       aria-checked={isItemSelected}
                       tabIndex={-1}
-                      key={row.IDEC}
+                      key={row.IDEC+index}
                       selected={isItemSelected}
                     >
                       <TableCell padding="checkbox">
@@ -205,7 +210,7 @@ function CustomPaginationActionsTable(props) {
                         scope="row"
                         padding="none"
                       >
-                        {row.IDEC}
+                        {row.IDEC+index}
                       </TableCell>
                       <TableCell align="right">{row.datetime}</TableCell>
                       <TableCell align="right">{row.datetime}</TableCell>
@@ -213,7 +218,7 @@ function CustomPaginationActionsTable(props) {
                     </TableRow>
                   );
                 }
-                return <div>{button2}</div>;
+                return  <React.Fragment>{button2}</React.Fragment> ;
               })}
 
             {/* {emptyRows > 0 && (
