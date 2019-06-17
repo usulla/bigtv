@@ -1,52 +1,48 @@
-// export function compareTable(arr1, arr2) {
-//     if (checkTypes(arguments, ["array", "array"])) {
-//         var diffCompareArr = [];
-//         Array.from(arguments).forEach((item, index) => {
-//             var timeLiveDifferent;
-//             diffCompareArr.push(
-//                 item.filter((obj, i) => {
-//                     //Compare difference live time and idec. Live time don't must to be more than 60000ms 
-//                     if(index === 0){
-//                     timeLiveDifferent = Math.abs(Date.parse(obj.datetime) - Date.parse(arr2[i].datetime))
-//                     return (obj.IDEC !== arr2[i].IDEC ||  timeLiveDifferent >= 60000)
-//                         ? true
-//                         : false;
-//                     } else{
-//                         timeLiveDifferent = Math.abs(Date.parse(obj.datetime) - Date.parse(arr1[i].datetime))
-//                         return (obj.IDEC !== arr1[i].IDEC ||  timeLiveDifferent >= 60000)
-//                         ? true
-//                         : false;
-//                     }
-//                 })
-//             );
-//         });
-//     } else {
-//         console.error("Arguments are not arrays");
-//     }
-//     return diffCompareArr;
-// }
-
 export function compareTable(arr) {
     if (checkTypes(arguments, ["array", "array"])) {
-        var comparedTables = arr;
+        var comparedTables = [];
         var timeLiveDifferent;
-        comparedTables[0].forEach((obj, i) => {
+        var lastEl;
+        arr[0].forEach((obj, i) => {
+            comparedTablesaddEl(obj);
+            addLicensedProps(i);
+            addAirTime(obj.datetime, i);
             //Compare difference live time and idec. Live time don't must to be more than 60000ms                 
-            timeLiveDifferent = Math.abs(Date.parse(obj.datetime) - Date.parse(comparedTables[1][i].datetime));
-            if ((obj.IDEC !== comparedTables[1][i].IDEC) || (timeLiveDifferent >= 60000)) {
-                obj.compare = false;
-                comparedTables[1][i].compare = false;
-             //   diffCompareArr.push([obj, arr2[i]]);
+            timeLiveDifferent = Math.abs(Date.parse(obj.datetime) - Date.parse(arr[1][i].datetime));
+            if ((obj.IDEC !== arr[1][i].IDEC) || (timeLiveDifferent >= 60000)) {
+                addPropsWithError(i);
+                addObjectWithErrorRow(i);
             }
             else {
-                obj.compare = true;
-                comparedTables[1][i].compare = true;
+                comparedTables[lastEl].compare = true;
             }
         })
     } else {
         console.error("Arguments are not arrays");
     }
-console.log(comparedTables, 'comparedTables')
+    function comparedTablesaddEl(obj) {
+        comparedTables.push(obj);
+        lastEl = comparedTables[0] !== undefined ? comparedTables.length - 1 : undefined;
+    }
+    function addPropsWithError(numRow) {
+        comparedTables[lastEl].compare = false;
+        comparedTables[lastEl].compareId = numRow;
+    }
+    function addObjectWithErrorRow(numRow) {
+        comparedTablesaddEl(arr[1][numRow])
+        comparedTables[lastEl].compare = false;
+        comparedTables[lastEl].compareId = numRow;
+    }
+    function addLicensedProps(numRow) {
+        comparedTables[numRow].licensed = true;
+    }
+    function addAirTime(datetime, numRow) {
+        var airTime = datetime.split(' ')[1];
+        var airDate = datetime.split(' ')[0];
+        comparedTables[numRow].airTime = airTime;
+        comparedTables[numRow].airDate = airDate;
+    }
+
     return comparedTables;
 }
 
