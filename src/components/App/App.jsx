@@ -3,33 +3,30 @@ import CustomPaginationActionsTable from "../Table/CustomPaginationActionsTable.
 import * as utils from "./actions.js";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
-import TableHead from '@material-ui/core/TableHead';
+import TableHead from "@material-ui/core/TableHead";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
-import { makeStyles } from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Button from '@material-ui/core/Button';
-import HorizontalLinearStepper from '../HorizontalLinearStepper/HorizontalLinearStepper.jsx'
-import CustomMaterialTable from '../MaterialTable/MaterialTable.jsx';
+import { makeStyles } from "@material-ui/core/styles";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import Button from "@material-ui/core/Button";
+import HorizontalLinearStepper from "../HorizontalLinearStepper/HorizontalLinearStepper.jsx";
+import CustomMaterialTable from "../MaterialTable/MaterialTable.jsx";
 
 const useStyles = makeStyles(theme => ({
-  progress: {
-    margin: theme.spacing(2)
-  },
   button: {
     margin: theme.spacing(1),
-    marginTop:'50px'
+    marginTop: "50px"
   }
 }));
 
-const SampleFab = () => {
-  const classes = useStyles();
-  return <div className={classes.progressblock}><CircularProgress className={classes.progress} color="secondary" /></div>;
-}
 const ButtonEl = () => {
   const classes = useStyles();
-  return <Button variant="contained" color="primary" className={classes.button}>Сохранить</Button>
-}
+  return (
+    <Button variant="contained" color="primary" className={classes.button}>
+      Сохранить
+    </Button>
+  );
+};
 
 class App extends Component {
   constructor(props) {
@@ -56,7 +53,11 @@ class App extends Component {
     function parseJSON(response) {
       return response.json();
     }
-    let urls = ["/data/tempData1.json", "/data/tempData2.json"];
+    let urls = [
+      "/data/tempData1.json",
+      "/data/tempData2.json",
+      "/data/tempData3.json"
+    ];
 
     Promise.all(
       urls.map(url =>
@@ -66,8 +67,6 @@ class App extends Component {
       )
     ).then(
       results => {
-        console.log(results);
-
         this.setState({ comparedTables: utils.compareTable(results) });
         this.setState({
           sourceTables: results,
@@ -75,29 +74,32 @@ class App extends Component {
         });
       },
       error => {
+        /* TODO: Сделать Snackbar уведомление */
         console.log(error);
         this.setState({
           error,
           isLoaded: true
         });
       }
-    ).then(
-      console.log(this.state.comparedTables, 'comparedTables')
     );
   }
-  
-  render() {   
+
+  render() {
     const { error, isLoaded } = this.state;
     if (error) {
       return <div>Ошибка: {error.message}</div>;
     } else if (!isLoaded) {
-      return <SampleFab/>
+      return (
+        <div className="center_block">
+          <CircularProgress color="secondary" />
+        </div>
+      );
     } else if (isLoaded) {
       return (
-        <div className='center_block'>   
-         {/*<CustomPaginationActionsTable dataForTable={this.state.comparedTables}/> 
+        <div className="center_block">
+          {/*<CustomPaginationActionsTable dataForTable={this.state.comparedTables}/> 
          <HorizontalLinearStepper/>    */}
-         <CustomMaterialTable dataForTable={this.state.comparedTables}/>
+          <CustomMaterialTable dataForTable={this.state.comparedTables} />
           {/* <ButtonEl/> */}
         </div>
       );

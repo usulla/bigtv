@@ -18,7 +18,7 @@ class CustomMaterialTable extends Component {
           lookup: { true: "unlicensed", false: "licensed" }
         }
       ],
-      data: [...this.props.dataForTable]
+      data: this.props.dataForTable
     };
   }
 
@@ -34,13 +34,16 @@ class CustomMaterialTable extends Component {
               rowData.compare === false ? "rgba(233,30,99,0.4)" : "#FFF"
           }),
           pageSize: 9,
-          pageSizeOptions: [9, 20, 30]
+          pageSizeOptions: [9, 20, 30],
+          actionsColumnIndex: -1
         }}
         localization={{
           body: {
             addTooltip: "Добавить",
             editTooltip: "Изменить",
-            deleteTooltip: "Удалить"
+            deleteTooltip: "Удалить",
+            emptyDataSourceMessage: "Не найдено совпадений",
+            editRow: { deleteText: "Удалить строку?" }
           },
           header: {
             actions: "Действия"
